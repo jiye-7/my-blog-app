@@ -1,23 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>My Blog App</p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ul>
+        <li>
+          <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/posts'>Posts List</Link>
+        </li>
+        <li>
+          <Link to='/posts/:id'>Post Detail</Link>
+        </li>
+        <li>
+          <Link to='/posts/new'>Post New</Link>
+        </li>
+        <li>
+          <Link to='/posts/edit/:id'>Post Edit</Link>
+        </li>
+        <li>
+          <Link to='/profile'>Profile</Link>
+        </li>
+      </ul>
+      <Routes>
+        <Route path='/' element={<div>Home Page</div>} />
+        <Route path='/posts' element={<div>Posts List Page</div>} />
+        <Route path='/posts/:id' element={<div>Post Detail Page</div>} />
+        <Route path='/posts/new' element={<div>Post New Page</div>} />
+        <Route path='/posts/edit/:id' element={<div>Post Edit Page</div>} />
+        <Route path='/profile' element={<div>Profile Page</div>} />
+        <Route path='*' element={<Navigate replace to='/' />} />
+      </Routes>
+    </>
   );
 }
 
