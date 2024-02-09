@@ -10,7 +10,7 @@ const Home = () => {
           <Link to='/profile'>프로필</Link>
         </div>
       </header>
-      <div className='post-list'>Post list</div>
+      <div className='post__list'>Post list</div>
       <footer>
         <div>Menu 1</div>
         <div>Menu 2</div>
