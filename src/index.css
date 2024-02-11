@@ -174,3 +174,50 @@ a:hover {
 .post__detail .post__text {
   padding: 20px 0;
 }
+
+/* profile */
+.profile__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  line-height: 24px;
+  font-size: 18px;
+}
+
+.flex__box-lg {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.profile__image {
+  width: 72px;
+  height: 72px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.profile__email {
+  font-weight: 500;
+}
+
+.profile__name {
+  font-size: 16px;
+  padding-top: 4px;
+}
+
+.profile__logout {
+  color: gray;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.profile__logout:hover,
+.profile__logout:focus {
+  color: black;
+}
